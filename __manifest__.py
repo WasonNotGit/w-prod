@@ -24,6 +24,7 @@
 
     # always loaded
     'data': [
+        'security/w_production_access_rules.xml',
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',

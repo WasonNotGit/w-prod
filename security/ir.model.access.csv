@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_w_production_wason_w_production_wason,w_production_wason.w_production_wason,model_w_production_wason_w_production_wason,,1,0,0,0
+access_w_production_wason_w_production_wason,w_production_wason,model_w_production_wason,,1,1,1,0

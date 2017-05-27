@@ -54,6 +54,30 @@
               action="w_production_wason.action_window"/>
     <menuitem name="Server to list" id="w_production_wason" parent="w_production_wason.menu_2"
               action="w_production_wason.action_server"/>
+    
+   <record model="ir.ui.view" id="crm_case_form_view_oppor">
+      <field name="name">crm_lead_wason form</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+      <field name="arch" type="xml">
+
+        <xpath expr="//field[@name='phone']" position="after">
+           
+            <field name="id_deposit"/>
+        </xpath>
+
+      </field>
+    </record>
     -->
+    <record model="ir.ui.view" id="view_partner_form3">
+        <field name="name">res.partner.form.inherit3</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="lang" position="before">
+                <field name="is_promo"/>
+            </field>
+        </field>
+    </record>    
   </data>
 </odoo>
