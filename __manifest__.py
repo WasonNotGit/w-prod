@@ -20,12 +20,15 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base',
+        'base_action_rule',
+        'base_setup',
+    ],
 
     # always loaded
     'data': [
         'security/w_production_access_rules.xml',
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
         'views/w_prod_menu.xml',

@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_w_production_wason_w_production_wason,res.partner,model_w_production_wason,,1,1,1,0
+access_w_production_wason,res.partner,base.model_res_partner,w_production_user,1,1,1,0
+access_w_production_girl_state_wason_for_user,w_production_girl_state_wason,model_w_production_girl_state_wason,w_production_user,1,0,0,0
+access_w_production_girl_state_wason_for_manager,w_production_girl_state_wason,model_w_production_girl_state_wason,w_production_manager,1,1,1,1

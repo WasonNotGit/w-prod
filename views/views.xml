@@ -75,21 +75,22 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <field name="lang" position="before">
-                <field name="is_model"/>
+                <field name="is_girl"/>
             </field>
           <notebook position="inside">
-              <page string="Данные модели" attrs="{'invisible':[('is_model','!=',True)]}">
+              <page string="Данные девушки" attrs="{'invisible':[('is_girl','!=',True)]}">
                   <group>
-                    <field name="model_birthdate"/>
-                    <field name="model_height"/>
-                    <field name="model_bust"/>
-                    <field name="model_waist"/>
-                    <field name="model_hips"/>
-                    <field name="model_cups"/>
-                    <field name="model_casting_date"/>
-                    <field name="model_casting_done"/>
-                    <field name="model_presentation_date"/>
-                    <field name="model_presentation_done"/>
+                    <field name="girl_state_id"/>
+                    <field name="girl_birthdate"/>
+                    <field name="girl_height"/>
+                    <field name="girl_bust"/>
+                    <field name="girl_waist"/>
+                    <field name="girl_hips"/>
+                    <field name="girl_cups"/>
+                    <field name="girl_casting_date"/>
+                    <field name="girl_casting_done"/>
+                    <field name="girl_presentation_date"/>
+                    <field name="girl_presentation_done"/>
                   </group>
               </page>
           </notebook>
