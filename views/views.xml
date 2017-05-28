@@ -75,8 +75,24 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <field name="lang" position="before">
-                <field name="is_promo"/>
+                <field name="is_model"/>
             </field>
+          <notebook position="inside">
+              <page string="Данные модели" attrs="{'invisible':[('is_model','!=',True)]}">
+                  <group>
+                    <field name="model_birthdate"/>
+                    <field name="model_height"/>
+                    <field name="model_bust"/>
+                    <field name="model_waist"/>
+                    <field name="model_hips"/>
+                    <field name="model_cups"/>
+                    <field name="model_casting_date"/>
+                    <field name="model_casting_done"/>
+                    <field name="model_presentation_date"/>
+                    <field name="model_presentation_done"/>
+                  </group>
+              </page>
+          </notebook>
         </field>
     </record>    
   </data>

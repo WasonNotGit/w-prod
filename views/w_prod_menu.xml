@@ -1,0 +1,44 @@
+<odoo>
+
+  <record id="action_open_model_list" model="ir.actions.act_window">
+          <field name="name">Модели в работе</field>
+          <field name="res_model">res.partner</field>
+          <field name="view_mode">tree,form</field>
+          <field name="view_type">form</field>
+  </record>
+
+
+  <menuitem
+      id="menu_w_prod_root"
+      name="W - production"
+      sequence="2"
+      groups="w_production_user"
+  />
+
+    <menuitem id="menu_w_prod_lists_top"
+              name="Модели(или каталоги)"
+              parent="menu_w_prod_root"
+              sequence="10"
+              groups="w_production_user"
+              />
+
+      <menuitem id="menu_models_list_actions"
+                name="Модели"
+                parent="menu_w_prod_lists_top"
+                action="action_open_model_list"
+                sequence="10"/>
+
+    <menuitem id="menu_w_prod_manage_top"
+              name="Управление"
+              parent="menu_w_prod_root"
+              sequence="100"
+              />
+
+    <!--menuitem id="menu_deposits_import-form"
+              name="Импорт из файла"
+              parent="menu_deposits_manage_top"
+              action="action_open_import-form"
+              sequence="100"/ -->
+
+
+</odoo>
