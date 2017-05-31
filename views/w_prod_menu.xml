@@ -5,6 +5,15 @@
           <field name="res_model">res.partner</field>
           <field name="view_mode">tree,form</field>
           <field name="view_type">form</field>
+          <field name="domain">[('is_girl','=',True)]</field>
+          <field name="view_id" ref="w_production_wason_custom_tree"/>
+  </record>
+
+  <record id="action_open_stauses_list" model="ir.actions.act_window">
+          <field name="name">Статусы моделей</field>
+          <field name="res_model">w_production_girl_state_wason</field>
+          <field name="view_mode">tree,form</field>
+          <field name="view_type">form</field>
   </record>
 
 
@@ -12,11 +21,11 @@
       id="menu_w_prod_root"
       name="W - production"
       sequence="2"
-      groups="w_production_user"
+      groups="w_production_user,w_production_manager"
   />
 
     <menuitem id="menu_w_prod_lists_top"
-              name="Модели(или каталоги)"
+              name="Списки(базы)"
               parent="menu_w_prod_root"
               sequence="10"
               groups="w_production_user"
@@ -32,7 +41,14 @@
               name="Управление"
               parent="menu_w_prod_root"
               sequence="100"
+              groups="w_production_manager"
               />
+
+      <menuitem id="menu_girls_statuses_list_actions"
+                name="Статусы моделей"
+                parent="menu_w_prod_manage_top"
+                action="action_open_stauses_list"
+                sequence="10"/>
 
     <!--menuitem id="menu_deposits_import-form"
               name="Импорт из файла"

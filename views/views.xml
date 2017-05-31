@@ -69,28 +69,39 @@
       </field>
     </record>
     -->
+  <record model="ir.ui.view" id="w_production_wason_custom_tree">
+      <field name="name">w_production_wason_girls_custom_form</field>
+      <field name="model">res.partner</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/> <!-- возраст, вакансия, текущий статус, контакты -->
+          <field name="mobile"/>
+          <field name="girl_state_id"/>
+          <field name="email"/>
+        </tree>
+      </field>
+    </record>
+
     <record model="ir.ui.view" id="view_partner_form3">
         <field name="name">res.partner.form.inherit3</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
             <field name="lang" position="before">
-                <field name="is_girl"/>
+                <field name="is_girl" groups="w_production_wason.w_production_user"/>
             </field>
           <notebook position="inside">
-              <page string="Данные девушки" attrs="{'invisible':[('is_girl','!=',True)]}">
+              <page string="Данные девушки" groups="w_production_wason.w_production_user" attrs="{'invisible':[('is_girl','!=',True)]}">
                   <group>
                     <field name="girl_state_id"/>
                     <field name="girl_birthdate"/>
+                    <field name="girl_age" attrs="{'readonly':[('girl_birthdate','!=',False)]}"/>
                     <field name="girl_height"/>
                     <field name="girl_bust"/>
                     <field name="girl_waist"/>
                     <field name="girl_hips"/>
-                    <field name="girl_cups"/>
                     <field name="girl_casting_date"/>
-                    <field name="girl_casting_done"/>
                     <field name="girl_presentation_date"/>
-                    <field name="girl_presentation_done"/>
                   </group>
               </page>
           </notebook>
